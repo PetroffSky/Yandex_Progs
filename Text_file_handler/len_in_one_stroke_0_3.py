@@ -9,7 +9,7 @@ def script_120():
                 print(f"Количество строк достигло больше 8, а именно {index}")
             elif len(stroke) > 120:
                 print(f"Длина {index}-й строки {len(stroke)} символов")
-                continue
+                break
             elif len(stroke) > 0:
                 print(f"Длина строки {len(stroke)} символов")
                 new_stroke = f"— {stroke}  \n"
