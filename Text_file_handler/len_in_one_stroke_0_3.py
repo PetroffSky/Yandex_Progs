@@ -22,6 +22,7 @@ def file_readwrite(mode):
 
         total_len = 0
         for index, stroke in enumerate(infile.read().split("\n"), 1):
+            stroke = stroke.strip(" ")
             total_len += len(stroke)
             if index > 8:
                 print(f"Количество строк: {index}")
