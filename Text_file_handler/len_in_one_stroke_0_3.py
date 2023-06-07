@@ -42,3 +42,4 @@ def file_readwrite(mode):
             new_stroke = f"— {stroke}  \n"
             outfile.write(new_stroke)
 
+    print(f"Общая длина текста составляет {total_len} символов")
