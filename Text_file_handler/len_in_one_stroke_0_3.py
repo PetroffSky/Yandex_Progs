@@ -39,7 +39,7 @@ def file_readwrite(mode):
             elif len(stroke) > 0:
                 print(f"Длина строки {len(stroke)} символов")
 
-            elif stroke[-1] != '.':
+            if stroke[-1] != '.':
                 stroke = stroke + '.'
 
             new_stroke = f"— {stroke}  \n"
