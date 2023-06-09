@@ -24,6 +24,8 @@ def file_readwrite(mode):
         for index, stroke in enumerate(infile.read().split("\n"), 1):
             stroke = stroke.strip(" ")
             total_len += len(stroke)
+            if len(stroke) == 0:
+                    continue
             if index > 8:
                 print(f"Количество строк: {index}")
             elif mode == 1:
@@ -37,7 +39,7 @@ def file_readwrite(mode):
             elif len(stroke) > 0:
                 print(f"Длина строки {len(stroke)} символов")
 
-            if stroke[-1] != '.':
+            elif stroke[-1] != '.':
                 stroke = stroke + '.'
 
             new_stroke = f"— {stroke}  \n"
