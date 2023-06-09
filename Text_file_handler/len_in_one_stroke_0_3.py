@@ -26,9 +26,7 @@ def file_readwrite(mode):
             total_len += len(stroke)
             if len(stroke) == 0:
                     continue
-            if index > 8:
-                print(f"Количество строк: {index}")
-            elif mode == 1:
+            if mode == 1:
                 result_1 = script_120(index, stroke)
                 if result_1 == False:
                     break
@@ -45,4 +43,5 @@ def file_readwrite(mode):
             new_stroke = f"— {stroke}  \n"
             outfile.write(new_stroke)
 
+    print(f"Общее количество строк: {index}")
     print(f"Общая длина текста составляет {total_len} символов")
